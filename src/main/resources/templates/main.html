@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<form method="post">
+<select name="type">
+    <option th:each="i : ${page}" th:value= "${i.getKey()}" th:text="${i.getKey()}"></option>
+</select>
+    <button type="submit">Проверить</button>
+</form>
+<br>
+<br>
+<label th:text = "${type}"/>
+<label th:text = "${typeCal}"/>
+<div><img th:src="${gif}"/></div>
+</body>
+</html>
